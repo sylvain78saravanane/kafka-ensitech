@@ -1,16 +1,19 @@
 package com.learn.kafka.consumer;
 
-import lombok.extern.log4j.Log4j;
+
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@Slf4j
 public class MessageConsumer {
 
-    @KafkaListener(topics = "xxxxx", groupId = "${spring.kafka.consumer.group-id}")
-    public void listen(String message) {
+    private static Logger log = LoggerFactory.getLogger(MessageConsumer.class);
+
+    @KafkaListener(topics = "${spring.kafka.consumer.topic-name}", groupId = "${spring.kafka.consumer.group-id}")
+    public void send(String message) {
         log.info("Message receive : {}", message);
     }
 
