@@ -13,7 +13,7 @@ public class MessageConsumer {
 
     private static Logger log = LoggerFactory.getLogger(MessageConsumer.class);
 
-    @KafkaListener(topics = "${}", groupId = "${spring.kafka.consumer.group-id}")
+    @KafkaListener(topics = "${spring.kafka.consumer.topic-name}", groupId = "${spring.kafka.consumer.group-id}")
     public void send(String message) {
         log.info("Message receive : {}", message);
     }

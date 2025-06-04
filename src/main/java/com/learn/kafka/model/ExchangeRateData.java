@@ -11,6 +11,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.Map;
 
 @Data
@@ -26,7 +27,7 @@ public class ExchangeRateData {
     private String baseCurrency;
 
     @Field(type = FieldType.Date)
-    private LocalDateTime timestamp;
+    private ZonedDateTime timestamp;
 
     @Field(type = FieldType.Long)
     private Long dateUnix;

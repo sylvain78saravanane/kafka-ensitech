@@ -1,31 +1,33 @@
 server:
   port: 8080
-
 spring:
   application:
-    name: exchange-rate-proxy
+    name: kafka
+
+  # Configuration Jackson
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
 
   # Configuration Kafka
   kafka:
     bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        spring.json.type.mapping: exchangeRate:com.learn.kafka.model.ExchangeRateData
+      # CHOIX 1 : Si vous gardez votre code actuel (JSON String manuel)
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
       group-id: exchange-rate-group
+      # CORRIGÉ : key-deserializer doit être String (pas Json)
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      properties:
-        spring.json.type.mapping: exchangeRate:com.learn.kafka.model.ExchangeRateData
-        spring.json.trusted.packages: "com.learn.kafka.model"
+      # CORRIGÉ : cohérent avec le producer String
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
   # Configuration Elasticsearch
   elasticsearch:
     uris: http://localhost:9200
-    username: elastic
-    password: changeme
 
 # Configuration personnalisée
 exchange-rate:
@@ -41,7 +43,7 @@ exchange-rate:
 # Logging
 logging:
   level:
-    com.ensitech.exchangerateproxy: DEBUG
+    com.learn.kafka: DEBUG
     org.springframework.kafka: INFO
     org.elasticsearch: INFO
 

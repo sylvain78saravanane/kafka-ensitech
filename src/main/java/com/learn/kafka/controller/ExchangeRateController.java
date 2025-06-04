@@ -3,6 +3,7 @@ package com.learn.kafka.controller;
 import com.learn.kafka.model.ExchangeRateData;
 import com.learn.kafka.service.ElasticsearchService;
 import com.learn.kafka.service.ExchangeRateService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -16,7 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/exchanges-rates")
+@RequestMapping("api/exchange-rates")
 @RequiredArgsConstructor
 @Slf4j
 public class ExchangeRateController {
@@ -29,7 +30,7 @@ public class ExchangeRateController {
      * avec GET : /api/exchange-rates/{baseCurrency}
      */
     @GetMapping("/{baseCurrency}")
-    public ResponseEntity<ExchangeRateData> getCurrentRates(@PathVariable String baseCurrency){
+    public ResponseEntity<ExchangeRateData> getCurrentRates(@Valid @PathVariable String baseCurrency){
         log.info("Request for current exchange rates with base currency: {}", baseCurrency);
 
         Optional<ExchangeRateData> exchangeRates = exchangeRateService.fetchExchangeRates(baseCurrency.toUpperCase());
@@ -44,7 +45,7 @@ public class ExchangeRateController {
      * GET /api/exchange-rates/{baseCurrency}/latest
      */
     @GetMapping("/{baseCurrency}/latest")
-    public ResponseEntity<ExchangeRateData> getLatestRates(@PathVariable String baseCurrency) {
+    public ResponseEntity<ExchangeRateData> getLatestRates(@Valid @PathVariable String baseCurrency) {
         log.info("Request for latest stored exchange rates with base currency: {}", baseCurrency);
 
         Optional<ExchangeRateData> exchangeRates = exchangeRateService.getLatestExchangeRates(baseCurrency.toUpperCase());
