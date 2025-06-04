@@ -1,6 +1,5 @@
 package com.learn.kafka.producer;
 
-import com.learn.kafka.producer.MessageProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;

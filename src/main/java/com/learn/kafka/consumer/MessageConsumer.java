@@ -1,13 +1,14 @@
 package com.learn.kafka.consumer;
 
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
+@Data
 public class MessageConsumer {
 
     private static Logger log = LoggerFactory.getLogger(MessageConsumer.class);
