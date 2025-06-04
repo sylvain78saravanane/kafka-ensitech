@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: exchange-rate-proxy
+
+  # Configuration Kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: exchangeRate:com.learn.kafka.model.ExchangeRateData
+    consumer:
+      group-id: exchange-rate-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.type.mapping: exchangeRate:com.learn.kafka.model.ExchangeRateData
+        spring.json.trusted.packages: "com.learn.kafka.model"
+
+  # Configuration Elasticsearch
+  elasticsearch:
+    uris: http://localhost:9200
+    username: elastic
+    password: changeme
+
+# Configuration personnalisée
+exchange-rate:
+  api:
+    url: https://api.exchangerate-api.com/v4/latest
+    default-base-currency: USD
+  kafka:
+    topic: exchange-rates
+  scheduler:
+    fixed-rate: 60000 # 1 minute
+    initial-delay: 5000
+
+# Logging
+logging:
+  level:
+    com.ensitech.exchangerateproxy: DEBUG
+    org.springframework.kafka: INFO
+    org.elasticsearch: INFO
+
+# Actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
