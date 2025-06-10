@@ -61,8 +61,8 @@ public class ExchangeRateController {
      */
     @GetMapping("/{baseCurrency}/rate/{targetCurrency}")
     public ResponseEntity<Map<String, Object>> getSpecificRate(
-            @PathVariable String baseCurrency,
-            @PathVariable String targetCurrency) {
+            @Valid @PathVariable String baseCurrency,
+            @Valid @PathVariable String targetCurrency) {
 
         log.info("Request for specific rate: {} to {}", baseCurrency, targetCurrency);
 
@@ -90,7 +90,7 @@ public class ExchangeRateController {
      */
     @GetMapping("/{baseCurrency}/history")
     public ResponseEntity<List<ExchangeRateData>> getHistoricalRates(
-            @PathVariable String baseCurrency,
+            @Valid @PathVariable String baseCurrency,
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime from,
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime to) {
 
