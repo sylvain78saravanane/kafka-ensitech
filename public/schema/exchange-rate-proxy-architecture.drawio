@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.6">
+  <diagram name="Page-1" id="VS6kQhNhkgN8Heg5X-i1">
+    <mxGraphModel dx="1829" dy="779" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7rNhHkICQw36exMxI0P6-4" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;gradientDirection=east;" vertex="1" parent="1">
+          <mxGeometry x="240" y="170" width="520" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-48" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-340" y="270" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-44" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;gradientDirection=west;" vertex="1" parent="7rNhHkICQw36exMxI0P6-48">
+          <mxGeometry width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-45" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;API&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="7rNhHkICQw36exMxI0P6-48">
+          <mxGeometry x="80" y="10" width="60" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="https://api.exchangerate-api.com/v4/latest/USD" link="https://api.exchangerate-api.com/v4/latest/USD" id="7rNhHkICQw36exMxI0P6-46">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="7rNhHkICQw36exMxI0P6-48">
+            <mxGeometry x="40" y="60" width="140" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="7rNhHkICQw36exMxI0P6-53" value="" style="shape=mxgraph.signs.travel.euro;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="7rNhHkICQw36exMxI0P6-48">
+          <mxGeometry x="10" y="10" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-52" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://net-security.fr/images/kibana_logo.png;" vertex="1" parent="1">
+          <mxGeometry x="920" y="239.35" width="220" height="201.3" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-54" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://blog.mossroy.fr/wp-content/uploads/2019/09/spring-boot-logo.png;" vertex="1" parent="1">
+          <mxGeometry x="270" y="180.75" width="170" height="89.25" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-55" value="" style="endArrow=classic;html=1;rounded=0;startFill=0;startArrow=none;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="310" as="sourcePoint" />
+            <mxPoint x="-119" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="60" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-58" value="&lt;b&gt;GET&lt;/b&gt; - /api/exchange-rates/{baseCurrency}/rate/{targetCurrency}" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7rNhHkICQw36exMxI0P6-55">
+          <mxGeometry x="0.2437" y="1" relative="1" as="geometry">
+            <mxPoint x="44" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-61" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://miro.medium.com/v2/resize:fit:1000/1*_-UHjQBIGgo877TvN-1-hw.png;" vertex="1" parent="1">
+          <mxGeometry x="560" y="357.98" width="170" height="52.02" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-62" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="7rNhHkICQw36exMxI0P6-4" target="7rNhHkICQw36exMxI0P6-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="370" as="sourcePoint" />
+            <mxPoint x="910" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-63" value="Visualisation des données" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="950" y="420" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-65" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="362.02" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-66" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="280" y="290" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-59" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;publication en temps réel&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;b&gt;TOPIC&lt;/b&gt; : exchange-rates&lt;div&gt;&lt;b&gt;group-id &lt;/b&gt;: exchange-rate-group&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="7rNhHkICQw36exMxI0P6-66">
+          <mxGeometry width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-60" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.ovhcloud.com/sites/default/files/styles/desktop_full_width/public/2024-01/kafka.png;" vertex="1" parent="7rNhHkICQw36exMxI0P6-66">
+          <mxGeometry x="30" y="10" width="140" height="54.14" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-67" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="620" y="282.02" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-120" y="330" as="sourcePoint" />
+            <mxPoint x="240" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-120" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7rNhHkICQw36exMxI0P6-69" value="Response : JSON" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="325" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
